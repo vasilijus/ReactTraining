@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
 import { Media } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+
 
 class Menu extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            dishes: [
-                {id:0, name: 'asd1', image: '', price: 4.40, description: 'blabla1' },
-                {id:1, name: 'asd2', image: '', price: 2.40, description: 'blabla2' },
-                {id:2, name: 'asd3', image: '', price: 3.40, description: 'blabla3' },
-            ]
+            
         }
     }
 
     render() {
-        const menu = this.state.dishes.map(dish => {
+        const menu = this.props.dishes.map(dish => {
             return (
                 <div key={dish.id} className="col-12 mt-5">
                     <Media tag="li">
