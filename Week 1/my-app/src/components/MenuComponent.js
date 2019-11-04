@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Media } from 'reactstrap';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
 
+import DishDetail from './DishDetailComponent.js';
 
 class Menu extends Component {
     constructor(props) {
@@ -24,13 +25,14 @@ class Menu extends Component {
     renderDish(dish) {
         if (dish != null) {
             return(
-                <Card>
-                    <CardImg width="100%" src={dish.image} alt={dish.name} />
-                    <CardBody>
-                        <CardTitle>{dish.name}</CardTitle>
-                    <CardText>{dish.description}</CardText>
-                    </CardBody>
-                </Card>
+                // <Card>
+                //     <CardImg width="100%" src={dish.image} alt={dish.name} />
+                //     <CardBody>
+                //         <CardTitle>{dish.name}</CardTitle>
+                //         <CardText>{dish.description}</CardText>
+                //     </CardBody>
+                    <DishDetail dish={dish}></DishDetail>
+                // </Card>
             )
         }
         else {
