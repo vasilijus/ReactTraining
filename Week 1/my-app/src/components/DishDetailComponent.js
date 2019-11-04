@@ -9,20 +9,48 @@ class DishDetail extends Component {
         }
     }
     
+    renderComments(comment) {
+        if (comment != null) {
+            return(
+                <div className="row">
 
+                         <CardBody>
+                             
+                             {/* <CardText>{dish.comments[0].comment}</CardText>
+                             <CardText>-- {dish.comments[0].author}</CardText> */}
+                         </CardBody>
+
+                </div>
+                 
+            )
+        }
+    }
     renderDish(dish) {
+        
         if (dish != null) {
             return(
-               
-                <div className="col-12 col-md-5 m-1">
-                    <Card>
-                        <CardImg width="100%" src={dish.image} alt={dish.name} />
+               <div className="row">
+                    <div className="col-12 col-md-5 m-1">
+                        <Card>
+                            <CardImg width="100%" src={dish.image} alt={dish.name} />
+                            <CardBody>
+                                <CardTitle>{dish.name}</CardTitle>
+                                <CardText>{dish.description}</CardText>
+                            </CardBody>
+                        </Card>
+                    </div>
+                    <div className="col-12 col-md-5 m-1">
+
                         <CardBody>
-                            <CardTitle>{dish.name}</CardTitle>
-                            <CardText>{dish.description}</CardText>
+                            
+                            <CardText>{dish.comments[0].comment}</CardText>
+                            <CardText>-- {dish.comments[0].author}</CardText>
+                            HARDCODED
                         </CardBody>
-                    </Card>
-                </div>
+
+                    </div>
+               </div>
+                
             )
         }
         else {
