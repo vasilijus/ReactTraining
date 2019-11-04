@@ -60,8 +60,8 @@ class DishDetail extends Component {
                         </Card>
                     </div>
                     <div className="col-12 col-md-5 m-1">
-                        <CardTitle><b>Comments</b></CardTitle>
-                                {this.renderComments(dish.comments)}
+                        <h4>Comments</h4>
+                        {this.renderComments(dish.comments)}
                     </div>
                </div>
             )
